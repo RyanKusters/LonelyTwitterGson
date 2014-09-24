@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import ca.ualberta.cs.lonelytwitter.data.FileDataManager;
+import ca.ualberta.cs.lonelytwitter.data.GsonDataManager;
 import ca.ualberta.cs.lonelytwitter.data.IDataManager;
 
 public class LonelyTwitterActivity extends Activity {
@@ -31,7 +31,7 @@ public class LonelyTwitterActivity extends Activity {
 
 		setContentView(R.layout.main);
 
-		dataManager = new FileDataManager(this);
+		dataManager = new GsonDataManager(this);
 
 		bodyText = (EditText) findViewById(R.id.body);
 		oldTweetsList = (ListView) findViewById(R.id.oldTweetsList);
