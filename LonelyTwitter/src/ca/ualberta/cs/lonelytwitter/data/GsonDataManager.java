@@ -53,10 +53,9 @@ public class GsonDataManager implements IDataManager {
 
 	public void saveTweets(List<Tweet> lts) {
 		try {
-			FileOutputStream fos = ctx.openFileOutput(FILENAME,
-					Context.MODE_PRIVATE);
+			FileOutputStream fos = ctx.openFileOutput(FILENAME, Context.MODE_PRIVATE);
 
-			String jsonTweetList = gson.toJson(lts);
+			String jsonTweetList = gson.toJson(lts); 
 			fos.write(jsonTweetList.getBytes());
 			fos.close();
 			
